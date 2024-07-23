@@ -1,4 +1,4 @@
-const apiKey = "AIzaSyCeEZ7hJcZ9GtK-06H-oUQEdG2_60ZbSGA";
+const apiKey = "AIzaSyCAnMEGYNe46hK1zOC-4wvRWFhOFFqmT4A";
 const channelId = "UCLjhW-Y-i4gEWuJaScv5Ufg";
 
 export async function fetchLatestVideo() {
