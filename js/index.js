@@ -1,5 +1,5 @@
-const apiKey = "AIzaSyC6DnTOa0FN4ndu09S5klmw3VtYNnFMc9w";
-const channelId = "UCLjhW-Y-i4gEWuJaScv5Ufg";
+const apiKey = process.env.API_KEY;
+const channelId = process.env.CHANNEL_ID;
 
 async function fetchLatestVideo() {
   try {
