@@ -19,6 +19,14 @@ body {
     background: #0d1117;
 }
 
+/*  Main Containers*/
+.main-container{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+
 /* Header styles  */
   .header {
     position: sticky;
@@ -94,15 +102,6 @@ section {
     margin: 4rem 0 2rem 0;
 }
 
-/* Slider */
-.slider-title {
-  font-size: 5rem;
-}
-
-.section-2 {
-    display: flex;
-    justify-content: center;
-}
 
 /* WhatsApp Btn */
 .wp-btn{
@@ -205,4 +204,96 @@ section {
         margin-top: 1rem;
         align-items: center;
     }
+}
+
+/*  Sliders */
+
+
+.section-1 {
+    max-width: 800px; /* Adjust width as needed */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.carousel {
+    position: relative; /* For absolute positioning of elements */
+    overflow: hidden; /* Hide overflow */
+}
+
+.carousel-item {
+    display: flex; /* Arrange content horizontally */
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Distribute space between image and text */
+    padding: 20px;
+    background-color: #fff; /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+
+.carousel-item.active {
+    transform: translateX(0); /* No translation for active slide */
+}
+
+
+.carousel-item:not(.active) {
+    transform: translateX(calc(100% * -1)); /* Hide off-screen */
+}
+
+
+.carousel-item img {
+    max-width: max-content; /* Adjust image width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+}
+
+
+.contenedor_texto {
+    text-align: center; /* Center text */
+}
+
+
+.slider-title {
+    font-size: 24px; /* Adjust font size as needed */
+    margin-top: 10px; /* Spacing below image */
+}
+
+
+.carousel-prev,
+.carousel-next {
+    position: absolute; /* Position within carousel container */
+    top: 50%; /* Vertical centering */
+    transform: translateY(-50%); /* Counteract vertical centering */
+    cursor: pointer; /* Indicate clickable area */
+    padding: 10px; /* Button size */
+    background-color: #ddd; /* Light background */
+    border-radius: 50%; /* Circular buttons */
+    font-size: 20px; /* Adjust icon size */
+    line-height: 30px; /* Center icon vertically */
+}
+
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background-color: #999; /* Darker background on hover */
+}
+
+
+.carousel-pagination {
+    display: flex; /* Arrange dots horizontally */
+    justify-content: center; /* Center dots */
+    margin-top: 20px; /* Spacing below slider content */
+}
+
+
+.pagination-dot {
+    width: 10px; /* Dot size */
+    height: 10px;
+    margin: 0 5px; /* Spacing between dots */
+    border-radius: 50%; /* Circular dots */
+    cursor: pointer; /* Indicate clickable area */
+    background-color: #ccc; /* Light gray color */
+}
+
+.pagination-dot.active {
+    background-color: #007bff; /* Blue color for active dot */
 }
