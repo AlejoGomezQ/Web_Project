@@ -1,5 +1,5 @@
-const apiKey = process.env.API_KEY;
-const channelId = process.env.CHANNEL_ID;
+const apiKey ="AIzaSyC6DnTOa0FN4ndu09S5klmw3VtYNnFMc9w";
+const channelId ="UCLjhW-Y-i4gEWuJaScv5Ufg";
 
 async function fetchLatestVideo() {
   try {
@@ -27,55 +27,59 @@ fetchLatestVideo();
 //------------------------------------------------------------------------------------
 
 //Sliders
+const slider = document.getElementById('slider');
+const carouselContainer = slider.querySelector('.carousel-container');
+const carouselItems = carouselContainer.querySelectorAll('.carousel-item');
+const nextBtn = slider.querySelector('.carousel-next');
+const prevBtn = slider.querySelector('.carousel-prev');
+const pagination = slider.querySelector('.carousel-pagination');
 
-var carousel,container,prevBtn,nextBtn,pagination;
-var bullets,totalItems,percent,currentIndex;
+let currentSlide = 0;
 
-function next() {
-  slideTo(currentIndex + 1);
-}
-
-function prev() {
-  slideTo(currentIndex - 1);
-}
-
-function slideTo(index) {
-  index = index < 0 ? totalItems - 1 : index >= totalItems ? 0 : index;
-  container.style.WebkitTransform = container.style.transform = 'translate(-' + (index * 100) + '%, 0)';
-  bullets[currentIndex].classList.remove('active-bullet');
-  bullets[index].classList.add('active-bullet');
-  currentIndex = index;
-}
-
-window.onload = function(){
-  carousel = document.querySelector('.carousel');
-  container = carousel.querySelector('.carousel-container');
-  prevBtn = carousel.querySelector('.carousel-prev');
-  nextBtn = carousel.querySelector('.carousel-next');
-  pagination = carousel.querySelector('.carousel-pagination');
-  totalItems = container.querySelectorAll('.carousel-item').length;
-  currentIndex = 0;
-
-  for(var i=0; i<totalItems;  i++)
-  {
-    var li = document.createElement("li");
-    li.classList.add("carousel-bullet");
-    pagination.appendChild(li);
-  }
-
-  bullets = [].slice.call(carousel.querySelectorAll('.carousel-bullet'));
-  bullets[currentIndex].classList.add('active-bullet');
-  prevBtn.addEventListener('click', prev, false);
-  nextBtn.addEventListener('click', next, false);
-
-  pagination.addEventListener('click', function(e) {
-    var index = bullets.indexOf(e.target);
-    if (index !== -1 && index !== currentIndex) {
-      slideTo(index);
+// Function to update the slider state
+function updateSlider(slideIndex) {
+  currentSlide = slideIndex;
+  carouselItems.forEach((item, index) => {
+    item.classList.remove('active');  // Remove active class from all slides
+    if (index === currentSlide) {
+      item.classList.add('active');  // Add active class to current slide
     }
-  }, false);
-
-  setInterval(next,6000);
+  });
+  createPagination(); // Update pagination based on current slide
 }
+
+// Function to create pagination dots
+function createPagination() {
+  pagination.innerHTML = ''; // Clear existing pagination dots
+  for (let i = 0; i < carouselItems.length; i++) {
+    const dot = document.createElement('li');
+    dot.classList.add('pagination-dot');
+    dot.addEventListener('click', () => updateSlider(i));
+    pagination.appendChild(dot);
+  }
+  pagination.children[currentSlide].classList.add('active');  // Mark current slide dot as active
+}
+
+// Event listeners for navigation buttons
+nextBtn.addEventListener('click', () => {
+  currentSlide++;
+  if (currentSlide === carouselItems.length) {
+    currentSlide = 0; // Loop back to first slide if reached end
+  }
+  updateSlider(currentSlide);
+});
+
+prevBtn.addEventListener('click', () => {
+  currentSlide--;
+  if (currentSlide < 0) {
+    currentSlide = carouselItems.length - 1; // Loop back to last slide if reached beginning
+  }
+  updateSlider(currentSlide);
+});
+
+// Initialize the slider state
+updateSlider(currentSlide);
+createPagination();
+
 
 //------------------------------------------------------------------------------------
