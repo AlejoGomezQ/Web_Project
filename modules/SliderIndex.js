@@ -1,4 +1,4 @@
-//Sliders
+/* //Sliders
 
 let carousel, container, prevBtn, nextBtn, pagination;
 let bullets, totalItems, percent, currentIndex;
@@ -55,3 +55,4 @@ export function moveSlide() {
     setInterval(next, 2000);
   });
 }
+ */
