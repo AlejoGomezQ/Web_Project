@@ -82,6 +82,8 @@ body {
   }
 
 /* Page sections */
+
+
 section {
     margin: 4rem 0 2rem 0;
 }
@@ -90,9 +92,33 @@ section {
     display: flex;
     justify-content: center;
 }
+
+.wp-btn{
+    position:absolute;
+    right:0;
+    bottom:0;
+    width:60px;
+    height:60px;
+    margin: 0 1rem 1rem 0;
+    border:none;
+    outline:none;
+    border-radius:100%;
+    background: #25D366;
+    transition:.3s;  
+  }
+
+  .wp-btn:hover {
+    transform:scale(1.2);
+  }
+
+  .fa-whatsapp:before {
+    color: #FFF;
+    font-size: 2rem;
+  }
   
 /* Responsive design */
-  @media only screen and (max-width: 950px) {
+/* Tablet */
+  @media (width <= 950px) {
     .menu {
       flex-direction: column;
       background-color: #151418;
@@ -123,3 +149,10 @@ section {
       cursor: pointer;
     }
   }
+
+  /* Mobile */
+@media (width <= 768px) {
+    body {
+        padding: 0 1rem 0 1rem;
+    }
+}
