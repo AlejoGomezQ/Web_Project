@@ -241,7 +241,7 @@ section {
 
 
 .carousel-item img {
-    max-width: 50%; /* Adjust image width as needed */
+    max-width: max-content; /* Adjust image width as needed */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Rounded corners */
 }
