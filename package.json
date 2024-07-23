@@ -12,5 +12,8 @@
     "Javascript"
   ],
   "author": "Alejandro Gómez, Camilo",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "flag-icons": "^7.2.3"
+  }
 }
