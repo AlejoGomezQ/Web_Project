@@ -93,6 +93,7 @@ section {
     justify-content: center;
 }
 
+/* WhatsApp Btn */
 .wp-btn{
     position:absolute;
     right:0;
@@ -104,6 +105,7 @@ section {
     outline:none;
     border-radius:100%;
     background: #25D366;
+    cursor: pointer;
     transition:.3s;  
   }
 
