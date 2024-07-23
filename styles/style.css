@@ -19,6 +19,14 @@ body {
     background: #0d1117;
 }
 
+/*  Main Containers*/
+.main-container{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+
 /* Header styles  */
   .header {
     position: sticky;
