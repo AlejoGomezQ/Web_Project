@@ -13,7 +13,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100dvh;
+    min-height: 100vh;
     max-width: 1120px;
     margin: auto;
     background: #0d1117;
@@ -33,7 +33,7 @@ body {
     top: 0;
     width: 100%;
     z-index: 1;
-    background: #0d1117;
+    background: #0d1117de;
   }
   
   nav {
@@ -90,10 +90,21 @@ body {
   }
 
 /* Page sections */
-
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px 20px 30px;
+}
 
 section {
     margin: 4rem 0 2rem 0;
+}
+
+/* Slider */
+.slider-title {
+  font-size: 5rem;
 }
 
 .section-2 {
@@ -103,22 +114,22 @@ section {
 
 /* WhatsApp Btn */
 .wp-btn{
-    position:absolute;
-    right:0;
-    bottom:0;
-    width:60px;
-    height:60px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
     margin: 0 1rem 1rem 0;
-    border:none;
-    outline:none;
-    border-radius:100%;
+    border: none;
+    outline: none;
+    border-radius: 100%;
     background: #25D366;
     cursor: pointer;
-    transition:.3s;  
+    transition: .3s;  
   }
 
   .wp-btn:hover {
-    transform:scale(1.2);
+    transform: scale(1.2);
   }
 
   .fa-whatsapp:before {
