@@ -131,10 +131,17 @@ section {
     flex-direction: column;
 }
 
-.designed-by-container, .designed-by-container > span {
+.designed-by-container, .author {
     color: #fff;
-    font-size: 1rem;
+}
 
+.designed-by-container > p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.author {
+    font-size: 0.9rem;
 }
 
 /* Responsive design */
