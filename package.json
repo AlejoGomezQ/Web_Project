@@ -1,0 +1,16 @@
+{
+  "name": "web_project",
+  "version": "1.0.0",
+  "description": "Simple landing page to show differents HTML and Javascript components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "Javascript"
+  ],
+  "author": "Alejandro Gómez, Camilo",
+  "license": "ISC"
+}
