@@ -1,15 +1,9 @@
 import { fetchLatestVideo } from "./modules/fetchVideo.js";
 import { openWp } from "./modules/openWhatsapp.js";
-import { slideTo } from "./modules/SliderIndex";
+import { moveSlide } from "./modules/sliderIndex.js";
 
 fetchLatestVideo();
 
 openWp();
 
-slideTo(2);
-
-//------------------------------------------------------------------------------------
-
-
-
-//------------------------------------------------------------------------------------
+moveSlide();
