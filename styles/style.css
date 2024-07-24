@@ -17,13 +17,7 @@ body {
     min-height: 100vh;
     max-width: 1120px;
     margin: auto;
-    /*background: #0d1117;*/
-
-
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(45deg, #9b2db2, #0d1117);
+    background: #0d1117;
 
 }
 
