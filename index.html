@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap" rel="stylesheet">
-    <title>Web Project</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Walk World Tour</title>
 </head>
 
 <body>
@@ -33,73 +33,77 @@
     </header>
     <main class="main-container">
         <section id="slider" class="section section-1">
-            <div class="carousel">
-                <div class="carousel-prev">&lt;</div>  <div class="carousel-next">&gt;</div>  <ul class="carousel-pagination"></ul>
-                <ul class="carousel-container">
-                    <li class="carousel-item" id="banner_1">
-                        <section class="contenedor_texto">
-                            <img src="assets/Col.jpg" alt="Colombia">
-                            <h2 class="slider-title">Colombia</h2>
-                        </section>
+            <div class="slider-frame">
+                <ul>
+                    <li>
+                        <img src="Assets/Col.webp" alt="Colombia">
                     </li>
-                    <li class="carousel-item" id="banner_2">
-                        <section class="contenedor_texto">
-                            <img src="assets/Asia.jpg" alt="Asia">
-                            <h2 class="slider-title">Asia</h2>
-                        </section>
+                    <li>
+                        <img src="Assets/Asia.jpg" alt="Asia">
+                    </li>
+                    <li>
+                        <img src="Assets/Euro.jpeg" alt="Europa">
                     </li>
                 </ul>
-            </div>
-        </section>
-                        </li>
-                        <li class="carousel-item" id="banner_3">
-                            <section class="contenedor_texto">
-
-                                <img src="assets/Euro.jpg"></a>
-
-                                <h2 class="slider-title">Europa</h2>
-
-                            </section>
-                        </li>
-                    </ul>
-                </div>
-
             </div>
         </section>
         <section id="youtube-channel" class="section section-2"></section>
         <section id="about" class="section section-3">
-            <div>
-                <p>Christian Leandro Carmona Muñoz, colombiano de 34 años, inició el proyecto "De Guerreo" en 2022. Sus
-                    logros incluyen:</p>
-                <ul>
-                    <li>Caminata de 360 km de Pereira a Bogotá.</li>
-                    <li>Travesía Páramos: 3057 km a pie en 9.5 meses, visitando 9 Parques Nacionales Naturales.</li>
-                    <li>Colaboración con CFMOTO: 5000 km en moto.</li>
-                </ul>
+            <p>Christian Leandro Carmona Muñoz, colombiano de 34 años, inició el proyecto "De Guerreo" en 2022. Sus
+                logros incluyen:</p>
 
+            <span>Caminata de 360 km de Pereira a Bogotá.</span>
+            <span>Travesía Páramos: 3057 km a pie en 9.5 meses, visitando 9 Parques Nacionales Naturales.</span>
+            <span>Colaboración con CFMOTO: 5000 km en moto.</span>
 
+            <p>Próximo desafío: Vuelta al mundo a pie.</p>
+            <span>Duración estimada: 10-15 años.</span>
+            <span>Ruta: Bogotá → Norteamérica → Asia → Europa → África → Sudamérica → Bogotá.</span>
+            <span>Incluye tramos en barco o avión para cruzar océanos.</span>
 
-                <p>Próximo desafío: Vuelta al mundo a pie.</p>
-                <ul>
-                    <li>Duración estimada: 10-15 años.</li>
-                    <li>Ruta: Bogotá → Norteamérica → Asia → Europa → África → Sudamérica → Bogotá.</li>
-                    <li>Incluye tramos en barco o avión para cruzar océanos.</li>
-                </ul>
-                </p>
-                <p>Este ambicioso proyecto representa una travesía global única, combinando aventura, resistencia física
-                    y exploración cultural.</p>
-            </div>
+            <p>Este ambicioso proyecto representa una travesía global única, combinando aventura, resistencia física
+                y exploración cultural.</p>
         </section>
         <section id="gallery" class="section section-4">
-            <div>
+            <div class="gallery">
+                <div class="row">
+                    <div class="col">
+                        <div class="image">
+                            <img class="gallery-img" src="Assets/Gallery/photo1.webp" alt="Image 1">
+                        </div>
+                        <div class="image">
+                            <img class="gallery-img" src="Assets/Gallery/photo2.webp" alt="Image 2">
+                        </div>
+                        <div class="image">
+                            <img class="gallery-img" src="Assets/Gallery/photo3.webp" alt="Image 3">
+                        </div>
+                    </div>
 
+                    <div class="col">
+                        <div class="image">
+                            <img class="gallery-img" src="Assets/Gallery/photo4.webp" alt="Image 4">
+                        </div>
+                        <div class="image">
+                            <img class="gallery-img" src="Assets/Gallery/photo5.webp" alt="Image 5">
+                        </div>
+                        <div class="image">
+                            <img class="gallery-img" src="Assets/Gallery/photo6.webp" alt="Image 6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal" class="modal">
+                <span class="close">&times;</span>
+                <img id="modal-image" src="" alt="Modal Image">
+                <div id="caption" class="caption"></div>
             </div>
         </section>
         <section id="contact" class="section section-5">
-            <div>
+            <div class="form-container">
                 <iframe
                     src="https://docs.google.com/forms/d/e/1FAIpQLScR89hT5_fQPSZh-OX1ZtPwYsrTCHPDNHh0O-ildKly9AUcaw/viewform?embedded=true"
-                    width="640" height="650" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                    frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
             </div>
         </section>
         <button id="wp-btn" class="wp-btn">
