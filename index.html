@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+Assets/Gallery/photo1.webp<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" />
@@ -64,7 +64,54 @@
             <p>Este ambicioso proyecto representa una travesía global única, combinando aventura, resistencia física
                 y exploración cultural.</p>
         </section>
-        <section id="gallery" class="section section-4"></section>
+        <section id="gallery" class="section section-4">
+            <div class="gallery">
+                <div class="image">
+                    <img src="Assets/Gallery/photo1.webp" alt="Image 1" onclick="openModal('Assets/Gallery/photo1.webp')">
+                </div>
+                <div class="image">
+                    <img src="Assets/Gallery/photo2.webp" alt="Image 2" onclick="openModal('Assets/Gallery/photo2.webp')">
+                </div>
+                <div class="image">
+                    <img src="Assets/Gallery/photo3.webp" alt="Image 3" onclick="openModal('Assets/Gallery/photo3.webp')">
+                </div>
+                <div class="image">
+                    <img src="Assets/Gallery/photo4.webp" alt="Image 4" onclick="openModal('Assets/Gallery/photo4.webp')">
+                </div>
+                <div class="image">
+                    <img src="Assets/Gallery/photo5.webp" alt="Image 5" onclick="openModal('Assets/Gallery/photo5.webp')">
+                </div>
+                <div class="image">
+                    <img src="Assets/Gallery/photo6.webp" alt="Image 6" onclick="openModal('Assets/Gallery/photo6.webp')">
+                </div>
+            </div>
+
+            <div id="modal" class="modal">
+                <span class="close" onclick="closeModal()">×</span>
+                <img id="modal-image" src="" alt="Modal Image">
+                <div id="caption" class="caption"></div>
+            </div>
+
+
+            <script>
+                function openModal(imageSrc, imageAlt) {
+                    const modal = document.getElementById('modal');
+                    const modalImg = document.getElementById('modal-image');
+                    const captionText = document.getElementById('caption');
+
+                    modal.style.display = 'block';
+                    modalImg.src = imageSrc;
+                    modalImg.alt = imageAlt;
+                    captionText.innerHTML = imageAlt;
+                }
+
+                function closeModal() {
+                    const modal = document.getElementById('modal');
+                    modal.style.display = 'none';
+                }
+
+            </script>
+        </section>
         <section id="contact" class="section section-5">
 
             <div class="contact-div">
