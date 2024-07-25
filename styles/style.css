@@ -1,168 +1,184 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    color: #FFF;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: #fff;
+}
 
 html {
-    font-family: "Mulish Variable", sans-serif;
-    scroll-behavior: smooth;
+  font-family: "Mulish Variable", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    max-width: 1120px;
-    margin: auto !important;
-    background: #0d1117;
-
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1120px;
+  margin: auto !important;
+  background: #0d1117;
 }
 
 /* Header styles  */
-  .header {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-    padding: 5px 30px;
-    border-radius: 50px;
-    animation: show-nav 1s linear both;
-    animation-timeline: scroll();
-    animation-range: 0 100px;
-  }
-  
-  .logo a {
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-  }
-  
-  .highlighted {
-    color: #8739fa;
-  }
-  
-  .menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-  }
-  
-  .menu a {
-    display: block;
-    padding: 7px 15px;
-    font-size: 17px;
-    font-weight: 500;
-    transition: 0.2s all ease-in-out;
-    color: #fff;
-  }
-  
-  .menu:hover a {
-    opacity: 0.4;
-  }
-  
-  .menu a:hover {
-    opacity: 1;
-    color: #fff;
-  }
-  
-  .menu-icon {
-    display: none;
-  }
-  
-  #menu-toggle {
-    display: none;
-  }
-  
-  #menu-toggle:checked ~ .menu {
-    transform: scale(1, 1);
-  }
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
 
-/* Flag hidden */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 5px 30px;
+  border-radius: 50px;
+  animation: show-nav 1s linear both;
+  animation-timeline: scroll();
+  animation-range: 0 100px;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.highlighted {
+  color: #8739fa;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 7px 15px;
+  font-size: 17px;
+  font-weight: 500;
+  transition: 0.2s all ease-in-out;
+  color: #fff;
+}
+
+.menu:hover a {
+  opacity: 0.4;
+}
+
+.menu a:hover {
+  opacity: 1;
+  color: #fff;
+}
+
+.menu-icon {
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked ~ .menu {
+  transform: scale(1, 1);
+}
+
+.rigth-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Flag */
+
+#flags > li {
+  cursor: pointer;
+}
+
 .hidden {
   display: none;
 }
 
 /* Title */
 .title {
-  font-size: 3rem;
+  font-size: 4rem;
   text-align: center;
+}
+
+.phrase {
+  margin: 1rem 0 1rem 0;
+  font-size: 2rem;
+  font-weight: 300;
 }
 
 /* Page sections */
 .main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 30px 20px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 30px 20px 30px;
 }
 
 section {
-    margin: 4rem 0 2rem 0;
+  margin: 4rem 0 2rem 0;
 }
 
-
 /* WhatsApp Btn */
-.wp-btn{
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 60px;
-    height: 60px;
-    margin: 0 1rem 1rem 0;
-    border: none;
-    outline: none;
-    border-radius: 100%;
-    background: #25D366;
-    cursor: pointer;
-    transition: .3s;  
-  }
+.wp-btn {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 60px;
+  height: 60px;
+  margin: 0 1rem 1rem 0;
+  border: none;
+  outline: none;
+  border-radius: 100%;
+  background: #25d366;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-  .wp-btn:hover {
-    transform: scale(1.2);
-  }
+.wp-btn:hover {
+  transform: scale(1.2);
+}
 
-  .fa-whatsapp:before {
-    color: #FFF;
-    font-size: 2rem;
-  }
+.fa-whatsapp:before {
+  color: #fff;
+  font-size: 2rem;
+}
 
 /* Footer */
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
 }
 
 .designed-by-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.designed-by-container, .author {
-    color: #fff;
+.designed-by-container,
+.author {
+  color: #fff;
 }
 
 .designed-by-container > p {
-    font-size: 1rem;
-    font-weight: bold;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .author {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
 /*  Sliders */
@@ -174,7 +190,7 @@ section {
   border-radius: 50px;
 }
 
-.slider-frame ul{
+.slider-frame ul {
   display: flex;
   height: auto;
   padding: 0;
@@ -183,13 +199,13 @@ section {
   animation: slide 12s infinite alternate ease-in-out;
 }
 
-.slider-frame li{
+.slider-frame li {
   list-style: none;
   width: 100%;
   height: 350px;
 }
 
-.slider-frame img{
+.slider-frame img {
   width: 100%;
 }
 
@@ -206,7 +222,7 @@ section {
   max-width: 300px;
   margin: 10px;
   overflow: hidden;
-  border-radius: 10px;  
+  border-radius: 10px;
 }
 .gallery-img {
   width: 100%;
@@ -288,7 +304,8 @@ section {
   cursor: pointer;
 }
 
-.close:hover, .close:focus {
+.close:hover,
+.close:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
@@ -306,90 +323,102 @@ section {
 
 /* Responsive design */
 /* Tablet */
-  @media (width <= 950px) {
-    .menu {
-      flex-direction: column;
-      background-color: #151418;
-      align-items: start;
-      position: absolute;
-      top: 70px;
-      left: 0;
-      width: 100%;
-      z-index: 1;
-      transform: scale(1, 0);
-      transform-origin: top;
-      transition: transform 0.3s ease-in-out;
-      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    }
-  
-    .menu a {
-      margin-left: 12px;
-    }
-  
-    .menu li {
-      margin-bottom: 10px;
-    }
-  
-    .menu-icon {
-      display: block;
-      color: #fff;
-      font-size: 28px;
-      cursor: pointer;
-    }
+@media (width <= 950px) {
+  .menu {
+    flex-direction: column;
+    background-color: #151418;
+    align-items: start;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   }
 
-  /* Mobile */
+  .menu a {
+    margin-left: 12px;
+  }
+
+  .menu li {
+    margin-bottom: 10px;
+  }
+
+  .menu-icon {
+    display: block;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+  }
+}
+
+/* Mobile */
 @media (width <= 768px) {
-    body {
-        padding: 0 1rem 0 1rem;
-    }
+  body {
+    padding: 0 1rem 0 1rem;
+  }
 
-    section {
-      margin: 2rem 0 1rem 0;
-    }
+  section {
+    margin: 2rem 0 1rem 0;
+  }
 
-    .footer {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .designed-by-container {
-        margin-top: 1rem;
-        align-items: center;
-    }
+  .designed-by-container {
+    margin-top: 1rem;
+    align-items: center;
+  }
 
-    /* Slider */
-    .slider-frame {
-      width: auto;
-      height: 300px;
-    }
+  /* Slider */
+  .slider-frame {
+    width: auto;
+    height: 300px;
+  }
 
-    .slider-frame li{
-      height: 300px;
-    }
+  .slider-frame li {
+    height: 300px;
+  }
 
-    /* Gallery */
-    .image {
-      flex: 1 1 calc(50% - 20px);
+  /* Gallery */
+  .image {
+    flex: 1 1 calc(50% - 20px);
   }
 }
 
 @media (max-width: 576px) {
   .image {
-      flex: 1 1 100%;
+    flex: 1 1 100%;
   }
 }
 
-@keyframes slide{
-  0%{margin-left: 0%;}
-  20%{margin-left: 0%;}
+@keyframes slide {
+  0% {
+    margin-left: 0%;
+  }
+  20% {
+    margin-left: 0%;
+  }
 
-  25%{margin-left: -100%;}
-  45%{margin-left: -100%;}
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
 
-  50%{margin-left: -200%;}
-  70%{margin-left: -200%;}
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
 }
 
 @keyframes show-nav {
