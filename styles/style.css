@@ -96,6 +96,10 @@ nav {
 
 /* Flag */
 
+#flags {
+  margin: 0 30px 0 30px;
+}
+
 #flags > li {
   cursor: pointer;
 }
@@ -374,6 +378,10 @@ section {
   .designed-by-container {
     margin-top: 1rem;
     align-items: center;
+  }
+
+  .phrase {
+    text-align: center;
   }
 
   /* Slider */
