@@ -21,19 +21,24 @@
             </div>
             <input type="checkbox" id="menu-toggle">
             <label for="menu-toggle" class="menu-icon">&#9776;</label>
-            <ul class="menu">
-                <li><a href="#youtube-channel">Youtube</a></li>
-                <li><a href="#about">Acerca de</a></li>
-                <li><a href="#gallery">Galería</a></li>
-                <li><a href="#contact">Contacto</a></li>
-                <li class="hidden"><a href=""><span class="fi fi-co"></span></a></li>
-                <li><a href=""><span class="fi fi-us"></span></a></li>
-            </ul>
+            <div class="rigth-menu">
+                <ul id="flags">
+                    <li class="hidden" data-language="es"><span class="fi fi-co"></span></li>
+                    <li data-language="en"><span class="fi fi-us"></span></li>
+                </ul>
+                <ul class="menu">
+                    <li><a href="#youtube-channel">Youtube</a></li>
+                    <li><a href="#about">Acerca de</a></li>
+                    <li><a href="#gallery">Galería</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
     <main class="main-container">
-        <h1 class="title">La vuelta <span class="highlighted">al mundo</span> a pie</h1>
+        <h1 class="title translate" data-section="main" data-value="title">La vuelta <span class="highlighted">al
+                mundo</span> a pie</h1>
         <section id="slider" class="section section-1">
             <div class="slider-frame">
                 <ul>
@@ -50,23 +55,15 @@
             </div>
         </section>
 
+        <h4 class="phrase translate" data-section="main" data-value="phrase1">Solo se vive una vez. Pero si lo haces
+            bien, una vez es suficiente</h4>
+
         <section id="youtube-channel" class="section section-2"></section>
 
-        <section id="about" class="section section-3">
-            <p>Christian Leandro Carmona Muñoz, colombiano de 34 años, inició el proyecto "De Guerreo" en 2022. Sus
-                logros incluyen:</p>
-
-            <span>Caminata de 360 km de Pereira a Bogotá.</span>
-            <span>Travesía Páramos: 3057 km a pie en 9.5 meses, visitando 9 Parques Nacionales Naturales.</span>
-            <span>Colaboración con CFMOTO: 5000 km en moto.</span>
-
-            <p>Próximo desafío: Vuelta al mundo a pie.</p>
-            <span>Duración estimada: 10-15 años.</span>
-            <span>Ruta: Bogotá → Norteamérica → Asia → Europa → África → Sudamérica → Bogotá.</span>
-            <span>Incluye tramos en barco o avión para cruzar océanos.</span>
-
-            <p>Este ambicioso proyecto representa una travesía global única, combinando aventura, resistencia física
-                y exploración cultural.</p>
+        <section id="about" class="section section-3 translate" data-section="main" data-value="description">
+            <p>Dar la vuelta al mundo a pie es una aventura épica que requiere una planificación meticulosa y una gran
+                determinación. Es una oportunidad única para conocer culturas diversas, superar tus límites y encontrar
+                una nueva perspectiva de la vida.</p>
         </section>
 
         <section id="gallery" class="section section-4">
@@ -98,6 +95,9 @@
             </div>
         </section>
 
+        <h4 class="phrase translate" data-section="main" data-value="phrase2">Un viaje de mil millas ha de comenzar con
+            un simple paso</h4>
+
         <section id="contact" class="section section-5">
             <div class="form-container">
                 <iframe
@@ -113,7 +113,7 @@
 
     <footer class="footer">
         <div class="logo">
-            <a href="index.html">WalkWorld.<span>Tour</span></a>
+            <a href="index.html">WalkWorld.<span class="highlighted">Tour</span></a>
         </div>
         <div class="designed-by-container">
             <p>Diseñado por:</p>
