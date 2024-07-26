@@ -133,6 +133,12 @@ section {
   margin: 4rem 0 2rem 0;
 }
 
+.section-2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 40px;
+}
+
 /* WhatsApp Btn */
 .wp-btn {
   position: fixed;
@@ -367,6 +373,11 @@ section {
 
   section {
     margin: 2rem 0 1rem 0;
+  }
+
+  .section-2 {
+    flex-direction: column;
+    gap: 40px 0;
   }
 
   .footer {
