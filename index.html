@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Walk World Tour</title>
 </head>
 
@@ -20,10 +20,10 @@
                 <a href="index.html">WalkWorld.<span class="highlighted">Tour</span></a>
             </div>
             <div class="rigth-menu">
-                <div id="flags">
-                    <p class="hidden" data-language="es"><span class="fi fi-co"></span></p>
-                    <p data-language="en"><span class="fi fi-us"></span></p>
-                </div>
+                <ul id="flags">
+                    <li class="hidden" data-language="es"><span class="fi fi-co"></span></li>
+                    <li data-language="en"><span class="fi fi-us"></span></li>
+                </ul>
                 <input type="checkbox" id="menu-toggle">
                 <label for="menu-toggle" class="menu-icon">&#9776;</label>
                 <ul class="menu">
@@ -58,14 +58,19 @@
         <h4 class="phrase translate" data-section="main" data-value="phrase1">Solo se vive una vez. Pero si lo haces
             bien, una vez es suficiente</h4>
 
-        <section id="youtube-channel" class="section section-2"></section>
-
-        <section id="about" class="section section-3 translate" data-section="main" data-value="description">
+        <section class="section section-2">
+            <div id="youtube-channel"></div>
             <p>Dar la vuelta al mundo a pie es una aventura épica que requiere una planificación meticulosa y una gran
                 determinación. Es una oportunidad única para conocer culturas diversas, superar tus límites y encontrar
                 una nueva perspectiva de la vida.</p>
         </section>
 
+        <!--         <section id="about" class="section section-3 translate" data-section="main" data-value="description">
+            <p>Dar la vuelta al mundo a pie es una aventura épica que requiere una planificación meticulosa y una gran
+                determinación. Es una oportunidad única para conocer culturas diversas, superar tus límites y encontrar
+                una nueva perspectiva de la vida.</p>
+        </section>
+ -->
         <section id="gallery" class="section section-4">
             <div class="gallery">
                 <figure class="gallery-item gallery-item-1">
@@ -121,7 +126,7 @@
             <span class="author">Camilo Hernández</span>
         </div>
     </footer>
-    <script src="/index.js" type="module"></script>
+    <script src="index.js" type="module"></script>
 </body>
 
 </html>
