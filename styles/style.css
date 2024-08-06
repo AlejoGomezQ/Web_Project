@@ -302,6 +302,7 @@ section {
   display: block;
   width: 80%;
   max-width: 700px;
+  max-height: 90vh;
 }
 
 .close {
@@ -406,8 +407,18 @@ section {
   }
 
   /* Gallery */
+  .gallery {
+    display: flex;
+    flex-direction: column;
+  }
+
   .image {
     flex: 1 1 calc(50% - 20px);
+  }
+
+  .gallery-img {
+    height: 70%;
+    border-radius: 10px;
   }
 }
 
