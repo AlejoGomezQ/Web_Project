@@ -1,6 +1,23 @@
+/**
+ * Clave API de YouTube utilizada para autenticar las solicitudes a la API.
+ * @constant {string}
+ */
 const X = "AIzaSyCAnMEGYNe46hK1zOC-4wvRWFhOFFqmT4A";
+
+/**
+ * ID del canal de YouTube del cual se obtendrán los videos.
+ * @constant {string}
+ */
 const channelId = "UCLjhW-Y-i4gEWuJaScv5Ufg";
 
+/**
+ * Obtiene el video más reciente del canal de YouTube especificado
+ * y lo inserta en un iframe en el DOM.
+ *
+ * @async
+ * @function fetchLatestVideo
+ * @throws {Error} Si ocurre un error al obtener el video.
+ */
 export async function fetchLatestVideo() {
   try {
     const response = await fetch(
