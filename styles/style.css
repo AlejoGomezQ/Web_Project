@@ -1,10 +1,14 @@
+:root {
+  color-scheme: light dark;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  color: #fff;
+  color: light-dark(#0d1117, #fff);
 }
 
 html {
@@ -18,7 +22,7 @@ body {
   min-height: 100vh;
   max-width: 1120px;
   margin: auto !important;
-  background: #0d1117;
+  background: light-dark(#edd7ff,#0d1117);
 }
 
 /* Header styles  */
@@ -44,7 +48,7 @@ nav {
 .logo a {
   font-size: 24px;
   font-weight: bold;
-  color: #fff;
+  color: light-dark(#0d1117, #fff);
 }
 
 .highlighted {
@@ -64,7 +68,7 @@ nav {
   font-size: 17px;
   font-weight: 500;
   transition: 0.2s all ease-in-out;
-  color: #fff;
+  color: light-dark(#0d1117, #fff);
 }
 
 .menu:hover a {
@@ -179,7 +183,7 @@ section {
 
 .designed-by-container,
 .author {
-  color: #fff;
+  color: light-dark(#0d1117, #fff);
 }
 
 .designed-by-container > p {
@@ -453,7 +457,7 @@ section {
 
 @keyframes show-nav {
   100% {
-    background: #0d1117e8;
+    background: light-dark(#ffffffc5, #0d1117e8);
     border: 1px solid #aaaaaa1c;
   }
 }

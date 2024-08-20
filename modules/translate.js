@@ -1,4 +1,4 @@
-const flags = document.getElementById("flags");
+/* const flags = document.getElementById("flags");
 const textsToChange = document.getElementsByClassName("translate");
 
 const toggleFlags = (lang) => {
@@ -45,3 +45,11 @@ export function translate() {
   const preferredLanguage = localStorage.getItem("preferredLanguage") || "es";
   changeLang(preferredLanguage);
 }
+ */
+
+let polyglot = new Polyglot();
+
+polyglot.extend({
+  hello: "Hello",
+  goodbye: "Goodbye",
+});

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
+    "build": "vite build",
     "compodoc": "npx compodoc -p tsconfig.doc.json"
   },
   "keywords": [
