@@ -1,3 +1,8 @@
+$black: #0d1117;
+$white: #ffffff;
+$light-purple: #edd7ff;
+$purple: #8739fa;
+
 :root {
     color-scheme: light dark;
   }
@@ -8,7 +13,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    color: light-dark(#0d1117, #fff);
+    color: light-dark($black, $white);
   }
   
   html {
@@ -22,7 +27,7 @@
     min-height: 100vh;
     max-width: 1120px;
     margin: auto !important;
-    background: light-dark(#edd7ff,#0d1117);
+    background: light-dark($light-purple,$black);
   }
   
   /* Header styles  */
@@ -48,11 +53,11 @@
   .logo a {
     font-size: 24px;
     font-weight: bold;
-    color: light-dark(#0d1117, #fff);
+    color: light-dark($black, $white);
   }
   
   .highlighted {
-    color: #8739fa;
+    color: $purple;
   }
   
   .menu {
@@ -68,7 +73,7 @@
     font-size: 17px;
     font-weight: 500;
     transition: 0.2s all ease-in-out;
-    color: light-dark(#0d1117, #fff);
+    color: light-dark($black, $white);
   }
   
   .menu:hover a {
@@ -77,7 +82,7 @@
   
   .menu a:hover {
     opacity: 1;
-    color: #fff;
+    color: $white;
   }
   
   .menu-icon {
@@ -164,7 +169,7 @@
   }
   
   .fa-whatsapp:before {
-    color: #fff;
+    color: $white;
     font-size: 2rem;
   }
   
@@ -183,7 +188,7 @@
   
   .designed-by-container,
   .author {
-    color: light-dark(#0d1117, #fff);
+    color: light-dark($black, $white);
   }
   
   .designed-by-container > p {
@@ -364,7 +369,7 @@
   
     .menu-icon {
       display: block;
-      color: #fff;
+      color: $white;
       font-size: 28px;
       cursor: pointer;
     }
@@ -457,7 +462,7 @@
   
   @keyframes show-nav {
     100% {
-      background: light-dark(#ffffffc5, #0d1117e8);
+      background: light-dark(#ffffffe4, #0d1117e8);
       border: 1px solid #aaaaaa1c;
     }
   }
