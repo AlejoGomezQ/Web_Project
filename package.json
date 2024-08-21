@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "web_project",
   "version": "1.0.0",
   "description": "Simple landing page to show differents HTML and Javascript components",
@@ -21,7 +22,7 @@
   },
   "devDependencies": {
     "jsdoc": "4.0.3",
-    "sass": "^1.77.8",
+    "sass": "1.77.8",
     "vite": "5.4.1"
   }
 }
