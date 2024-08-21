@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "compodoc": "npx compodoc -p tsconfig.doc.json"
+    "doc": "jsdoc -r ./ -d ./documentation"
   },
   "keywords": [
     "HTML",
@@ -17,10 +17,11 @@
   "license": "ISC",
   "dependencies": {
     "flag-icons": "7.2.3",
-    "node-polyglot": "^2.6.0"
+    "node-polyglot": "2.6.0"
   },
   "devDependencies": {
-    "sass": "1.77.8",
+    "jsdoc": "4.0.3",
+    "sass": "^1.77.8",
     "vite": "5.4.1"
   }
 }
