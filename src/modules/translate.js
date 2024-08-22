@@ -46,7 +46,6 @@ export function translate() {
   changeLang(preferredLanguage);
 }
  */
-
 import Polyglot from "node-polyglot";
 // Importa tus objetos de idioma
 import english from "../languages/en.js";
@@ -74,15 +73,19 @@ window.onload = function () {
  */
 function handleLanguageSwitch(event) {
   const selectedLanguage = event.target.closest("li").getAttribute("language");
+  // Guarda el idioma seleccionado en localStorage
+  localStorage.setItem('preferredLanguage', selectedLanguage);
   switchLanguage(selectedLanguage);
 }
 
 /**
- * Inicializa el control de idioma basado en la configuración regional del usuario y muestra la bandera opuesta.
+ * Inicializa el control de idioma basado en la configuración regional del usuario o en la preferencia almacenada, y muestra la bandera opuesta.
  * @function initializeLanguageControl
  */
 export function initializeLanguageControl() {
-  const initialLang = isUserLanguageSpanish() ? "es" : "en"; // Detecta el idioma del usuario
+  // Obtiene el idioma guardado en localStorage, si existe
+  const storedLang = localStorage.getItem('preferredLanguage');
+  const initialLang = storedLang || (isUserLanguageSpanish() ? "es" : "en"); // Usa el idioma guardado o detecta el idioma del usuario
   polyglot = new Polyglot();
   switchLanguage(initialLang); // Establece el idioma inicial y muestra la bandera opuesta
 }
@@ -153,3 +156,4 @@ function updateFlags(lang) {
     englishFlag.classList.add("hidden");
   }
 }
+
