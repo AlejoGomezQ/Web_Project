@@ -46,6 +46,7 @@ export function translate() {
   changeLang(preferredLanguage);
 }
  */
+
 import Polyglot from "node-polyglot";
 // Importa tus objetos de idioma
 import english from "../languages/en.js";
@@ -55,6 +56,10 @@ let polyglot;
 let btnEs, btnEn;
 const flags = document.getElementById("flags");
 
+/**
+ * Inicializa el control de idioma al cargar la ventana y asigna los manejadores de eventos a los botones de cambio de idioma.
+ * @function window.onload
+ */
 window.onload = function () {
   btnEn = document.getElementById("btn-en");
   btnEs = document.getElementById("btn-es");
@@ -63,18 +68,31 @@ window.onload = function () {
   btnEs.addEventListener("click", handleLanguageSwitch);
 };
 
+/**
+ * Manejador de eventos para el cambio de idioma. Cambia el idioma de la aplicación según la bandera seleccionada.
+ * @param {Event} event - El evento click que activa el cambio de idioma.
+ */
 function handleLanguageSwitch(event) {
-  const selectedLanguage = event.target.closest("li").getAttribute("idioma");
+  const selectedLanguage = event.target.closest("li").getAttribute("language");
   switchLanguage(selectedLanguage);
 }
 
-function initializeLanguageControl() {
-  const initialLang = isUserLanguageSpanish() ? "es" : "en";  // Detecta el idioma del usuario
+/**
+ * Inicializa el control de idioma basado en la configuración regional del usuario y muestra la bandera opuesta.
+ * @function initializeLanguageControl
+ */
+export function initializeLanguageControl() {
+  const initialLang = isUserLanguageSpanish() ? "es" : "en"; // Detecta el idioma del usuario
   polyglot = new Polyglot();
-  switchLanguage(initialLang);  // Establece el idioma inicial y muestra la bandera opuesta
+  switchLanguage(initialLang); // Establece el idioma inicial y muestra la bandera opuesta
 }
 
-function switchLanguage(locale) {
+/**
+ * Cambia el idioma de la aplicación y actualiza los textos localizados en el DOM.
+ * @function switchLanguage
+ * @param {string} locale - El código de idioma seleccionado (e.g., "es" o "en").
+ */
+export function switchLanguage(locale) {
   if (locale === "en") {
     polyglot.locale("en");
     polyglot.extend(english);
@@ -86,17 +104,21 @@ function switchLanguage(locale) {
   updateFlags(locale); // Actualiza las banderas
 }
 
-function isUserLanguageSpanish() {
+/**
+ * Verifica si el idioma preferido del usuario es el español.
+ * @function isUserLanguageSpanish
+ * @returns {boolean} - True si el idioma del usuario es español, false en caso contrario.
+ */
+export function isUserLanguageSpanish() {
   const userLanguage = navigator.language;
   const spanish = "es";
   return userLanguage.includes(spanish);
 }
 
-// Función de localización - obtiene las preferencias de idioma del usuario
-function getUserPreferredLocale() {
-  return isUserLanguageSpanish() ? espanol : english;
-}
-
+/**
+ * Obtiene el conjunto de textos localizados y los aplica en el DOM.
+ * @function loadLocalizedTexts
+ */
 function loadLocalizedTexts() {
   try {
     document.getElementById("youtube").innerHTML = polyglot.t("youtube");
@@ -105,7 +127,8 @@ function loadLocalizedTexts() {
     document.getElementById("contact").innerHTML = polyglot.t("contact");
     document.getElementById("title").innerHTML = polyglot.t("title");
     document.getElementById("phrase1").innerHTML = polyglot.t("phrase1");
-    document.getElementById("description").innerHTML = polyglot.t("description");
+    document.getElementById("description").innerHTML =
+      polyglot.t("description");
     document.getElementById("phrase2").innerHTML = polyglot.t("phrase2");
     document.getElementById("text").innerHTML = polyglot.t("text");
   } catch (e) {
@@ -113,6 +136,11 @@ function loadLocalizedTexts() {
   }
 }
 
+/**
+ * Actualiza la visibilidad de las banderas en función del idioma seleccionado.
+ * @function updateFlags
+ * @param {string} lang - El código de idioma seleccionado (e.g., "es" o "en").
+ */
 function updateFlags(lang) {
   const spanishFlag = flags.querySelector('li[data-language="es"]');
   const englishFlag = flags.querySelector('li[data-language="en"]');
@@ -125,5 +153,3 @@ function updateFlags(lang) {
     englishFlag.classList.add("hidden");
   }
 }
-
-export { initializeLanguageControl, switchLanguage, isUserLanguageSpanish };
