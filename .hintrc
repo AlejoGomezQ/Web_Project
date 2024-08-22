@@ -25,6 +25,8 @@
           "backdrop-filter"
         ]
       }
-    ]
+    ],
+    "typescript-config/strict": "off",
+    "meta-viewport": "off"
   }
 }
