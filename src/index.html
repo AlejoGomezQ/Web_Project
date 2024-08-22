@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap" rel="stylesheet">
+    <script type="module" src="..\src\modules\translate.js"></script>
     <title>Walk World Tour</title>
 </head>
 
@@ -20,24 +21,24 @@
             </div>
             <div class="rigth-menu">
                 <ul id="flags">
-                    <li class="hidden" data-language="es"><span class="fi fi-co"></span></li>
-                    <li data-language="en"><span class="fi fi-us"></span></li>
+                    <li idioma="en" id="btn-en" data-language="en"><span class="fi fi-us"></span></li>
+                    <li class="hidden" idioma="es" id="btn-es" data-language="es"><span class="fi fi-co"></span></li>
                 </ul>
                 <input type="checkbox" id="menu-toggle">
                 <label for="menu-toggle" class="menu-icon">&#9776;</label>
                 <ul class="menu">
                     <li><a href="#youtube-channel" class="translate" data-section="menu"
-                            data-value="youtube">Youtube</a></li>
-                    <li><a href="#about" class="translate" data-section="menu" data-value="about">Acerca de</a></li>
-                    <li><a href="#gallery" class="translate" data-section="menu" data-value="gallery">Galería</a></li>
-                    <li><a href="#contact" class="translate" data-section="menu" data-value="contact">Contacto</a></li>
+                        data-value="youtube" id="youtube">Youtube</a></li>
+                    <li><a href="#about" class="translate" data-section="menu" data-value="about" id="about">Acerca de</a></li>
+                    <li><a href="#gallery" class="translate" data-section="menu" data-value="gallery" id="gallery">Galería</a></li>
+                    <li><a href="#contact" class="translate" data-section="menu" data-value="contact" id="contact">Contacto</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <main class="main-container">
-        <h1 class="title translate" data-section="main" data-value="title">La vuelta <span class="highlighted">al
+        <h1 class="title translate" data-section="main" data-value="title" id="title">La vuelta <span class="highlighted">al
                 mundo</span> a pie</h1>
         <section id="slider" class="section section-1">
             <div class="slider-frame">
@@ -55,12 +56,12 @@
             </div>
         </section>
 
-        <h4 class="phrase translate" data-section="main" data-value="phrase1">Solo se vive una vez. Pero si lo haces
+        <h4 class="phrase translate" data-section="main" data-value="phrase1" id="phrase1">Solo se vive una vez. Pero si lo haces
             bien, una vez es suficiente</h4>
 
         <section class="section section-2">
             <div id="youtube-channel"></div>
-            <p class="translate" data-section="main" data-value="description">Ahora me embarco en un viaje que tomará
+            <p class="translate" data-section="main" data-value="description" id="description">Ahora me embarco en un viaje que tomará
                 entre 10 y 15 años
                 caminando alrededor del mundo. Esta travesía
                 comenzará en Bogotá, Colombia. Desde allí, me dirigiré hacia el norte, pasando por Centroamérica y
@@ -100,7 +101,7 @@
             </div>
         </section>
 
-        <h4 class="phrase translate" data-section="main" data-value="phrase2">Un viaje de mil millas ha de comenzar con
+        <h4 class="phrase translate" data-section="main" data-value="phrase2" id="phrase2">Un viaje de mil millas ha de comenzar con
             un simple paso</h4>
 
         <section id="contact" class="section section-5">
@@ -121,9 +122,10 @@
             <a href="index.html">WalkWorld.<span class="highlighted">Tour</span></a>
         </div>
         <div class="designed-by-container">
-            <p class="translate" data-section="footer" data-value="text">Diseñado por:</p>
+            <p class="translate" data-section="footer" data-value="text" id="text">Diseñado por:</p>
             <span class="author">Alejandro Gómez</span>
-            <span class="author">Camilo Hernández</span>
+            <span class="author">Samuel Uribe</span>
+            <span class="author">Joaquin Castaño</span>
         </div>
     </footer>
     <script src="index.js" type="module"></script>
