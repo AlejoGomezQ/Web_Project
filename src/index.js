@@ -20,7 +20,7 @@ import { initModal } from "./modules/imageModal.js";
 import { openWp } from "./modules/openWhatsapp.js";
 import { adjustFormIframe } from "./modules/form.js";
 import { initializeLanguageControl, switchLanguage, isUserLanguageSpanish } from "./modules/translate.js";
-import { validateLogin} from "./modules/validationsForm.js";
+
 
 document.addEventListener("DOMContentLoaded", () => {
   fetchLatestVideo();
@@ -37,5 +37,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   isUserLanguageSpanish();
 
-  validateLogin();
+
 });

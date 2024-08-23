@@ -478,28 +478,50 @@ $purple: #8739fa;
   height: 500px;
 }
 
+/* Login Container */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: light-dark($white, $purple);
+  width: 400px;
+  margin: auto;
+  height: 500px;
+  border-radius: 50px;
+}
+
 .login-tittle {
-  color: light-dark($black, $white);
+  color: light-dark($black, $black); /* Cambia color según el modo */
   margin-top: 70px;
   margin-bottom: 95px;
 }
 
 input {
   border: none;
-  background-color: #f0f0f0;
+  background-color:light-dark(#f0f0f0, $white); /* Fondo input cambia con el modo */
+  color: light-dark($black, $black); /* Color del texto dentro del input cambia con el modo */
   display: block;
   margin: 25px auto; 
   height: 40px;
   width: 220px;
+  border-radius: 50px;
+  
+
+  &::placeholder{
+    color: gray;
+  }
 }
 
 .login-button {
   width: 220px;
   height: 35px;
-  background-color: $purple;
+  background-color: light-dark($purple, $black);
   border: none;
   font-weight: 500;
   font-size: 15px;
+  color: light-dark($white, $white); /* Color del texto del botón */
+  border-radius: 50px;
 }
 
 .login-button:hover {
@@ -507,17 +529,17 @@ input {
 }
 
 .sign-in {
-  color: $purple;
+  color: light-dark($purple,$white);/* Color para el enlace de sign-in cambia con el modo */
 }
 
 .create-account {
   margin-top: 15px;
   font-size: 14px;
-  color: light-dark($black, $white);
+  color: light-dark($black, $black); /* Color para el enlace de create account cambia con el modo */
 }
 
 .error-message {
-  color: red;
+  color: light-dark(red,  #FFA500);
   font-size: 12px;
   margin: 0;
   display: none; 
@@ -526,22 +548,19 @@ input {
 #passwordError {
   margin-bottom: 18px;
 }
-
-/* Sign-in Container */
 .signin-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: #ffffff;
+  background-color: light-dark($white, $purple);
   width: 400px;
   margin: auto;
-  height: 680px;
+  height: 720px;
+  border-radius: 50px;
 }
-
-.signin-tittle {
-  margin-top: 65px;
-  color: light-dark($black, $white);
+.signin-tittle{
+  color: $black;
+  margin-top: 45px;
+  margin-bottom: 75px;
 }
-
-
