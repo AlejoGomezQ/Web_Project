@@ -466,4 +466,65 @@ $purple: #8739fa;
       border: 1px solid #aaaaaa1c;
     }
   }
-  
+  .login-container{
+    text-align: center;
+    background-color: #ffffff;
+    margin-top: 200px;
+    width: 400px;
+    margin: auto;
+    height: 500px;
+  }
+  .login-tittle{
+    color: $black;
+    margin-top: 70px;
+    margin-bottom: 95px;
+  }
+  input {
+    border: none;
+    background-color: #f0f0f0;
+    display: block;
+    margin: 25px auto; 
+    height: 40px;
+    width: 220px;
+}
+.login-button{
+  width: 220px;
+  height: 35px;
+  background-color: $purple;
+  border: none;
+  font-weight: 500;
+  font-size: 15px;
+}
+.login-button:hover{
+  cursor: pointer;
+}
+.sign-in{
+  color: $purple;
+}
+.create-account{
+  margin-top: 15px;
+  font-size: 14px;
+}
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin: 0;
+  display: none; 
+}
+#passwordError{
+  margin-bottom: 18px;
+}
+.signin-container{
+  text-align: center;
+  background-color: #ffffff;
+ 
+  width: 400px;
+  margin: auto;
+  height: 650px;
+}
+.signin-tittle{
+  margin-top: 65px;
+}
+.signin-container{
+  height: 700px;
+}
