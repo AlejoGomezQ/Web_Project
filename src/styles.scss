@@ -489,6 +489,7 @@ $purple: #8739fa;
   margin: auto;
   height: 500px;
   border-radius: 50px;
+  padding-left: 15px;
 }
 
 .login-tittle {
@@ -506,7 +507,7 @@ input {
   height: 40px;
   width: 220px;
   border-radius: 50px;
-  
+  padding-left: 15px;
 
   &::placeholder{
     color: gray;
