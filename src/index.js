@@ -19,20 +19,23 @@ import { fetchLatestVideo } from "./modules/fetchVideo.js";
 import { initModal } from "./modules/imageModal.js";
 import { openWp } from "./modules/openWhatsapp.js";
 import { adjustFormIframe } from "./modules/form.js";
-import { initializeLanguageControl, switchLanguage, isUserLanguageSpanish } from "./modules/translate.js";
+import {
+  initializeLanguageControl,
+  switchLanguage,
+  isUserLanguageSpanish,
+} from "./modules/translate.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetchLatestVideo();
+  const currentPath = window.location.pathname;
 
-  openWp();
-
-  initModal();
-
-  adjustFormIframe();
-
-  initializeLanguageControl();
-
-  switchLanguage();
-
-  isUserLanguageSpanish();
+  // Verifica si la ruta actual es /index.html
+  if (currentPath === "/index.html" || currentPath === "/") {
+    fetchLatestVideo();
+    openWp();
+    initModal();
+    adjustFormIframe();
+    initializeLanguageControl();
+    switchLanguage();
+    isUserLanguageSpanish();
+  }
 });
