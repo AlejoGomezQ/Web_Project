@@ -479,7 +479,7 @@ $purple: #8739fa;
 }
 
 .login-tittle {
-  color: $black;
+  color: light-dark($black, $white);
   margin-top: 70px;
   margin-bottom: 95px;
 }
@@ -513,6 +513,7 @@ input {
 .create-account {
   margin-top: 15px;
   font-size: 14px;
+  color: light-dark($black, $white);
 }
 
 .error-message {
@@ -540,6 +541,7 @@ input {
 
 .signin-tittle {
   margin-top: 65px;
+  color: light-dark($black, $white);
 }
 
 
